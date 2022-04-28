@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue CDN</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="./src/app.js" defer></script>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <div id="app">
+        <div class="messageStyle colorGreen">
+            {{ message }}
+        </div>
+        <br>
+        <div class="divExample color555">
+            - Usando el método: <br>
+            {{ a }} + {{ b }} = {{ SumarAB() }}
+        </div>
+        <div class="divExample">
+            - Usando la propiedad computada (modo óptimo): <br>
+            {{ a }} + {{ b }} = {{ SumarABC }}
+        </div>
+        <div v-text="message" class="divExample2"> </div>
+        <div v-html="html_message" class="divExample2"> </div>
+        <img v-bind:src="urlImage" v-bind:alt="description" width="555">
+        <hr>
+        <!-- <div v-on:click="methodTest">Click me</div> -->
+        <div @click="methodTest">Click me</div>
+        <br>
+        <hr>
+        <div class="divExample">
+            - Usando doble data-binding: <br>
+            <input type="text" v-bind:value="textParagraph_vbind" v-on:keyup="updateVariable($event)">
+            <p>{{ textParagraph_vbind }}</p>
+        </div>
+        <hr>
+        <div class="divExample">
+            - Usando v-model: <br>
+            <input type="text" v-model="textParagraph_vmodel">
+            <p>{{ textParagraph_vmodel }}</p>
+
+        </div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="./src/app.js" defer></script>
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Vue Directivas</title>
+</head>
+<body>
+    <div id="app">
+        <div class="divExample">
+            Valor variable 'dibujoPrimerParrafo': {{ dibujoPrimerParrafo }}
+        </div>
+        <hr>
+        <div class="divExample" v-if="caso == 1">
+            Está es la descripción del primer parráfo
+        </div>
+        <div class="divExample" v-else-if="caso == 2">
+            Está es la descripción del segundo parráfo
+        </div>
+        <div class="divExample" v-else>
+            Está es la descripción del tercer parráfo
+        </div>
+        <hr>
+        <div>Usando la directiva v-show:</div>
+        <div class="divExample2" v-show="dibujoPrimerParrafo">
+            <p>Esto es un parráfo utilizando v-show</p> 
+        </div>
+        <hr>
+        <div class="divExample2">
+            <button @click="hideParagraph">{{ TitleButton }}</button>
+            <div class="divExample" v-if="hideVal">
+                Hola!!!!
+            </div>
+        </div>
+        <hr>
+        <div class="divExample2">
+            <div :class="'filaTabla' + classColumn(i)" v-for="(item, i) in teams" :key="i">
+                <!-- <img :src="'./images/' + item.nombreImagen + '.png'" :alt="item.descripcion"> -->
+                {{ item.id }} - {{ item.descripcion }}
+                <br>
+                <span v-for="(element, e) in item.jugadores" :key="e"> --{{ element }}-- </span>
+            </div>
+        </div>
+        <hr>
+        <div class="divExample2">
+            <div :class="cssParagraph">
+                Ejemplo utilizando la directiva :class
+            </div>
+            <div :class="classParagraph">
+                Ejemplo utilizando la directiva :class (computada)
+            </div>
+            <div :class="classParagraph2()">
+                Ejemplo utilizando la directiva :class (método)
+            </div>
+        </div>
+        <hr>
+        <div class="divExample2">
+            <div :style="StyleParagraph">
+                Ejemplo utilizando directiva :style
+            </div>
+            <div :style="StyleParagraph2()">
+                Ejemplo utilizando directiva :style
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
