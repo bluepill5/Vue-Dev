@@ -1,6 +1,6 @@
 
-# Created by https://www.toptal.com/developers/gitignore/api/node,vue
-# Edit at https://www.toptal.com/developers/gitignore?templates=node,vue
+# Created by https://www.toptal.com/developers/gitignore/api/node,vue,vuejs
+# Edit at https://www.toptal.com/developers/gitignore?templates=node,vue,vuejs
 
 ### Node ###
 # Logs
@@ -153,4 +153,11 @@ docs/_book
 # TODO: where does this rule come from?
 test/
 
-# End of https://www.toptal.com/developers/gitignore/api/node,vue
+### Vuejs ###
+# Recommended template: Node.gitignore
+
+dist/
+npm-debug.log
+yarn-error.log
+
+# End of https://www.toptal.com/developers/gitignore/api/node,vue,vuejs
