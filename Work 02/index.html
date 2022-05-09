@@ -13,9 +13,27 @@
 </head>
 <body>
     <div id="app">
+        <h1>Componentes personalizadas:</h1>
+        <h2>Tabla 1:</h2>
         <vue-table 
             :titulos="tabla1.titulos"
-            :registros="tabla1.registros">
+            :registros="tabla1.registros"
+            :estilo-body="tabla1.estiloBody"
+            :estilo-head="tabla1.estiloHead">
+        </vue-table>
+        <h2>Tabla 2:</h2>
+        <vue-table 
+            :titulos="tabla2.titulos"
+            :registros="tabla2.registros"
+            :estilo-body="tabla2.estiloBody"
+            :estilo-head="tabla2.estiloHead">
+        </vue-table>
+        <h2>Tabla 3:</h2>
+        <vue-table 
+            :titulos="tabla3.titulos"
+            :registros="tabla3.registros"
+            :estilo-body="tabla3.estiloBody"
+            :estilo-head="tabla3.estiloHead">
         </vue-table>
     </div>
 </body>
