@@ -7,5 +7,5 @@
 
 ## Demo:
 
-![CounterVue](https://user-images.githubusercontent.com/4382527/166390548-c3473ccd-13cb-478f-82f4-538565951876.gif)
+![VueComponent](https://user-images.githubusercontent.com/4382527/167322764-b1b1c42a-bd9e-40f1-85ea-7841e49295f6.gif)
 
