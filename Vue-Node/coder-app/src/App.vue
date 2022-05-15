@@ -12,7 +12,7 @@
 import HelloWorld from './components/HelloWorld.vue'
 import TituloComponent from './components/TituloComponent.vue';
 import DescriptionComponent from './components/DescriptionComponent.vue';
-import TestWatcher from './components/WatchTest.vue';
+import WatchTest from './components/WatchTest.vue';
 
 export default {
   name: 'App',
