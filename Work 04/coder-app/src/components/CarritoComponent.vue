@@ -7,11 +7,12 @@
 <script>
 export default {
     name: 'CarritoComponent',
-    data() {
-        return {
-            productos: [],
+    props: {
+        productos: {
+            type: Array,
+            required: true,
         }
-    }
+    },
 }
 </script>
 

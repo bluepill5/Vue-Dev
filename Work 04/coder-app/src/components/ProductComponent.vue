@@ -48,9 +48,9 @@ export default {
         }
     },
     mounted() {
-        console.log(this.el);
-        console.log(`Las propiedades de este componente son: ${this.$props}`)
-        console.log(`Las propiedades de este componente son: ${this.$data}`)
+        // console.log(this.el);
+        // console.log(`Las propiedades de este componente son: ${this.$props}`)
+        // console.log(`Las propiedades de este componente son: ${this.$data}`)
     },
     methods: {
         getImgUrl() {

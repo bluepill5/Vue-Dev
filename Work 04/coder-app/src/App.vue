@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <CarritoComponent :productos="productosEnCarrito" />
     <img class="roundedImg" alt="Logo" src="./assets/I-LOVE-R.png" />
     <div>
       <ProductComponent
@@ -54,6 +55,14 @@ export default {
   components: {
     ProductComponent, CarritoComponent
   },
+  methods: {
+    AgregarAlCarrito(id){
+      let result = this.productos.find((prod) => {
+        return prod.id == id;
+      });
+      this.productosEnCarrito.push(result);
+    }
+  }
 };
 </script>
 
