@@ -1,8 +1,13 @@
 <template>
   <div id="app">
     <CarritoComponent :productos="productosEnCarrito" />
+
+    <TituloComponent>
+       A new block of ideas
+    </TituloComponent>
+
     <img class="roundedImg" alt="Logo" src="./assets/I-LOVE-R.png" />
-    <div>
+    <div class="contenedorProductos">
       <ProductComponent
         v-for="(item, i) in productos"
         :key="i"
@@ -15,12 +20,16 @@
       >
       </ProductComponent>
     </div>
+    <br><br>
+    <SlotsComponent></SlotsComponent>
   </div>
 </template>
 
 <script>
 import ProductComponent from "./components/ProductComponent.vue";
 import CarritoComponent from "./components/CarritoComponent.vue";
+import TituloComponent from "./components/TituloComponent.vue";
+import SlotsComponent from "./components/SlotsComponent.vue";
 
 export default {
   name: "App",
@@ -53,7 +62,7 @@ export default {
     };
   },
   components: {
-    ProductComponent, CarritoComponent
+    ProductComponent, CarritoComponent, TituloComponent, SlotsComponent
   },
   methods: {
     AgregarAlCarrito(id){
