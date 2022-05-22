@@ -23,6 +23,6 @@ h1 {
     margin: 0;
     padding: 2.5rem;
     background-color: #ccc;
-    margin-inline-start: 2.5rem;
+    margin-block-start: 2.5rem;
 }
 </style>

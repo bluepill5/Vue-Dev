@@ -5,13 +5,3 @@
       <slot name="slot2"></slot>
   </div>
 </template>
-
-<script>
-export default {
-
-}
-</script>
-
-<style>
-
-</style>

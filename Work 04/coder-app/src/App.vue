@@ -21,15 +21,34 @@
       </ProductComponent>
     </div>
     <br><br>
-    <SlotsComponent></SlotsComponent>
+    <SlotsComponent>
+      <template v-slot:slot1>
+        <h3>Un título para la página</h3>
+      </template>
+
+      <p>Un párrafo para el contenido principal</p>
+      <p>y otro más</p>
+
+      <template v-slot:slot2>
+        <h3>Footer de la página</h3>
+      </template>
+    </SlotsComponent>
+    <br><br>
+
+    <FilterComponent></FilterComponent>
+    <br><br>
+    
+    <MixinComponent></MixinComponent>
   </div>
 </template>
 
-<script>
+<script> 
 import ProductComponent from "./components/ProductComponent.vue";
 import CarritoComponent from "./components/CarritoComponent.vue";
 import TituloComponent from "./components/TituloComponent.vue";
 import SlotsComponent from "./components/SlotsComponent.vue";
+import FilterComponent from "./components/FilterComponent.vue";
+import MixinComponent from "./components/MixinComponent.vue";
 
 export default {
   name: "App",
@@ -62,7 +81,8 @@ export default {
     };
   },
   components: {
-    ProductComponent, CarritoComponent, TituloComponent, SlotsComponent
+    ProductComponent, CarritoComponent, TituloComponent, SlotsComponent,
+    FilterComponent, MixinComponent
   },
   methods: {
     AgregarAlCarrito(id){
@@ -88,5 +108,10 @@ export default {
   border-radius: 50%;
   block-size: 17%;
   inline-size: 17%;
+}
+.contenedorProductos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 </style>
