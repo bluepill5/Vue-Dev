@@ -47,8 +47,12 @@
               id="inputEmail" 
               placeholder="tu@email.com" 
               v-model="form.email"
+              @keyup="validateEmail"
               required
             >
+            <span v-if="alert.email" class="alert-danger">
+              {{ alert.email }}
+            </span>
           </div>
           <br>
           <!-- Curso -->
@@ -181,8 +185,8 @@ export default {
       },
       alert: {
         nombre: '',
+        edad: '',
         email: '',
-        edad: ''
       }
   }),
   methods: {
@@ -208,8 +212,17 @@ export default {
     validateEdad() {
       if (this.form.edad < 18) {
         this.alert.edad = 'Debes tener más de 18 años';
+      } else if (this.form.edad > 100) {
+        this.alert.edad = 'Seguro tienes más de 100 años?';
       } else {
         this.alert.edad = '';
+      }
+    },
+    validateEmail() {
+      if (!this.form.email.includes('@')) {
+        this.alert.email = 'Ingresa un correo válido';
+      } else {
+        this.alert.email = '';
       }
     }
   }

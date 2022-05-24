@@ -2,12 +2,14 @@
   <div id="app">
     <img class="logo-vue" alt="Vue logo" src="./assets/logo.png">
     <FormularioWeb @submit-form="addUser"/>
-    <VueTable
-        :titulos=titles
-        :registros=users
-        :estilo-body=estiloBody
-        :estilo-head=estiloHead>
-    </VueTable>
+    <div class="table-container">
+      <VueTable
+          :titulos=titles
+          :registros=users
+          :estilo-body=estiloBody
+          :estilo-head=estiloHead>
+      </VueTable>
+    </div>
   </div>
 </template>
 

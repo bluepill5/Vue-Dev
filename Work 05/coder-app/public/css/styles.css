@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(248, 238, 144);
+    background-color: rgb(202, 200, 186);
 }
 
 .logo-vue {
@@ -31,6 +31,14 @@ body {
     padding-inline: 1rem;
     padding-block-start: 1rem;
     padding-block-end: 2rem;
+}
+
+.table-container {
+    border: 1px solid black;
+    background-color: white;
+    padding: 1rem;
+    margin-inline: 2rem;
+    margin-block-end: 1.5rem;
 }
 
 .border {
