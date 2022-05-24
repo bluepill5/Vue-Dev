@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <NavComponent></NavComponent>
     <CarritoComponent :productos="productosEnCarrito" />
 
     <TituloComponent>
@@ -37,7 +38,7 @@
 
     <FilterComponent></FilterComponent>
     <br><br>
-    
+
     <MixinComponent></MixinComponent>
   </div>
 </template>
@@ -49,6 +50,7 @@ import TituloComponent from "./components/TituloComponent.vue";
 import SlotsComponent from "./components/SlotsComponent.vue";
 import FilterComponent from "./components/FilterComponent.vue";
 import MixinComponent from "./components/MixinComponent.vue";
+import NavComponent from "./components/NavComponent.vue";
 
 export default {
   name: "App",
@@ -82,7 +84,7 @@ export default {
   },
   components: {
     ProductComponent, CarritoComponent, TituloComponent, SlotsComponent,
-    FilterComponent, MixinComponent
+    FilterComponent, MixinComponent, NavComponent
   },
   methods: {
     AgregarAlCarrito(id){
